@@ -24,7 +24,7 @@
 # This is a powershell userdata script used to bootstrap Amazon's Windows AMI's with 
 # RightScale's server agent called RightLink (https://github.com/rightscale/right_link)
 #
-# Script Repo: https://raw.github.com/cloudoman/ec2_userdata_scripts
+# Script Repo: https://github.com/cloudoman/ec2_userdata_scripts
 # ------------------------------------------------------------------------------------------
 
 # Check if RightLink is installed:
