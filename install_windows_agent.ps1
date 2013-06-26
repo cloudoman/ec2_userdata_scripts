@@ -4,7 +4,7 @@
 #
 # Author:: Ameer Deen (ameer.deen@cloudoman.com)
 #
-# Copyright:: 2012 Cloudoman PTY LTD.
+# Copyright:: 2012 Cloudoman Pty Ltd.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@
 $isInstalled = gwmi win32_service | where {$_.name -like "Rightlink"}
 if ($isInstalled)
 {
-	Write-Output "RightLink is already installed, exitting"
+	Write-Output "RightLink is already installed, exiting."
 	Exit 0
 }
 
@@ -39,7 +39,7 @@ if ($isInstalled)
 $folder = "c:\temp\rightlink"
 mkdir -force $folder 
 cd $folder 
-$fileUrl = "http://mirror.rightscale.com/rightscale_rightlink/latest/windows/Rightscale_Windows_x64_5.8.8.msi"
+$fileUrl = "http://mirror.rightscale.com/rightscale_rightlink/5.8.12/windows/Rightscale_Windows_x64_5.8.12.msi"
 $fileName = "$folder\" + $fileUrl.Split('/')[-1]
 (new-object System.Net.WebClient).DownloadFile($fileUrl, $fileName )
 
